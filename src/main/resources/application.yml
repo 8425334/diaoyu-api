@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.92.153.252:3306/order?useUnicode=true&characterEncoding=utf-8
+    username: order
+    password: order
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+##jwt配置
+jwt:
+  # 密钥盐
+  secret: 6cdbf09cb4c791ee
+  # token有效时长
+  expire: 36000000
+  # header 名称
+  header: token
+#控制验证码的时效
+server:
+  servlet:
+    session:
+      timeout: 1m
